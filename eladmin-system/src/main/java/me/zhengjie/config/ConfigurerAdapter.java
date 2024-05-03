@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * WebMvcConfigurer
  *
- * @author Zheng Jie
+ *
  * @date 2018-11-30
  */
 @Configuration

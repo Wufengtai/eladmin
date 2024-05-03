@@ -26,7 +26,7 @@ import me.zhengjie.base.BaseEntity;
 import java.io.Serializable;
 
 /**
-* @author Zheng Jie
+* 
 * @date 2019-09-05
 */
 @Getter

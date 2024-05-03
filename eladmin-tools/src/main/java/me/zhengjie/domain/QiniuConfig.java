@@ -25,7 +25,7 @@ import java.io.Serializable;
 
 /**
  * 七牛云对象存储配置类
- * @author Zheng Jie
+ * 
  * @date 2018-12-31
  */
 @Data

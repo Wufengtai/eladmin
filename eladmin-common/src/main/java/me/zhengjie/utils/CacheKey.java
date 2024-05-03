@@ -16,8 +16,6 @@
 package me.zhengjie.utils;
 
 /**
- * @author: liaojinlong
- * @date: 2020/6/11 15:49
  * @apiNote: 关于缓存的Key集合
  */
 public interface CacheKey {
@@ -51,6 +49,26 @@ public interface CacheKey {
      * 岗位
      */
     String JOB_ID = "job::id:";
+    /**
+     * 仓库
+     */
+    String STORE_ID = "store::id:";
+    /**
+     * 货品
+     */
+    String Good_ID = "good::id:";
+    /**
+     * 出入库记录
+     */
+    String HISTORY_ID = "goodHis::id:";
+    /**
+     * 区域字典
+     */
+    String AREA_ID = "area::id:";
+    /**
+     * 订单字典
+     */
+    String ORDER_ID = "order::id:";
     /**
      * 数据字典
      */

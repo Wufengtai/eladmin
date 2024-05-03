@@ -32,7 +32,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * @author Zheng Jie
+ * 
  * @date 2018-11-22
  */
 @Getter
@@ -60,6 +60,10 @@ public class User extends BaseEntity implements Serializable {
     @ApiModelProperty(value = "用户部门")
     @TableField(exist = false)
     private Dept dept;
+
+    @NotBlank
+    @ApiModelProperty(value = "身份证号")
+    private String ic;
 
     @NotBlank
     @ApiModelProperty(value = "用户名称")

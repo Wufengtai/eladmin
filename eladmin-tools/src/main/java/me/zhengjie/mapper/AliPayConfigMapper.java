@@ -20,7 +20,7 @@ import me.zhengjie.domain.AlipayConfig;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author Zheng Jie
+ * 
  * @description
  * @date 2023-06-14
  **/

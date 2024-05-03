@@ -24,7 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author Zheng Jie
+ * 
  */
 @Component
 public class JwtAccessDeniedHandler implements AccessDeniedHandler {

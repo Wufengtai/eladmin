@@ -29,7 +29,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 /**
- * @author Zheng Jie
+ *
  * @date 2018-11-22
  */
 @Slf4j

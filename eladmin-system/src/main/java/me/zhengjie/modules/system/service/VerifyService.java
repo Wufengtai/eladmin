@@ -18,7 +18,7 @@ package me.zhengjie.modules.system.service;
 import me.zhengjie.domain.vo.EmailVo;
 
 /**
- * @author Zheng Jie
+ *
  * @date 2018-12-26
  */
 public interface VerifyService {

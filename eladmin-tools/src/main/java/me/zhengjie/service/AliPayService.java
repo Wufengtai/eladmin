@@ -20,7 +20,7 @@ import me.zhengjie.domain.vo.TradeVo;
 import me.zhengjie.domain.AlipayConfig;
 
 /**
- * @author Zheng Jie
+ * 
  * @date 2018-12-31
  */
 public interface AliPayService extends IService<AlipayConfig> {

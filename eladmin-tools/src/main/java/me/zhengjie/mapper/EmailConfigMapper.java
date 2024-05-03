@@ -20,7 +20,7 @@ import me.zhengjie.domain.EmailConfig;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author Zheng Jie
+ * 
  * @description
  * @date 2023-06-14
  **/

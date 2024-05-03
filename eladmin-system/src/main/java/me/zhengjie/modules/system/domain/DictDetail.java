@@ -27,7 +27,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
-* @author Zheng Jie
+* 
 * @date 2019-04-10
 */
 @Getter

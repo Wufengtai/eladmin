@@ -18,7 +18,7 @@ package me.zhengjie.modules.system.domain.vo;
 import lombok.Data;
 
 /**
- * @author Zheng Jie
+ * 
  * 公共查询类
  */
 @Data

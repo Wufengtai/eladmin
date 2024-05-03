@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="me.zhengjie.modules.store.mapper.StoreMapper">
+    <resultMap id="BaseResultMap" type="me.zhengjie.modules.store.entity.StoreEntity">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="address" property="address"/>
+        <result column="phone" property="phone"/>
+        <result column="police_info" property="policeInfo"/>
+        <result column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="type" property="type"/>
+        <result column="create_by" property="createBy"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, name, address, police_info, user_id, create_time, update_time, create_by, update_by, user_name, type, phone
+    </sql>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from qbs_store
+        <where>
+            <if test="criteria.ids != null and criteria.ids.size() > 0">
+                and id in
+                <foreach collection="criteria.ids" item="id" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </if>
+            <if test="criteria.name != null and criteria.name != ''">
+                and name like concat('%', #{criteria.name}, '%')
+            </if>
+            <if test="criteria.type != null">
+                and type = #{criteria.type}
+            </if>
+            <if test="criteria.createTime != null and criteria.createTime.size() != 0">
+                and create_time between #{criteria.createTime[0]} and #{criteria.createTime[1]}
+            </if>
+        </where>
+    </select>
+</mapper>

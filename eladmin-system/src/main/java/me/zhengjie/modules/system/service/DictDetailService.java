@@ -24,7 +24,7 @@ import me.zhengjie.utils.PageResult;
 import java.util.List;
 
 /**
-* @author Zheng Jie
+* 
 * @date 2019-04-10
 */
 public interface DictDetailService extends IService<DictDetail> {

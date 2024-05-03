@@ -33,7 +33,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author Zheng Jie
+ *
  * @date 2018-11-24
  */
 @RestController

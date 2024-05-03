@@ -21,7 +21,7 @@ import me.zhengjie.domain.QiniuConfig;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * @author Zheng Jie
+ *
  * @description
  * @date 2023-06-14
  **/

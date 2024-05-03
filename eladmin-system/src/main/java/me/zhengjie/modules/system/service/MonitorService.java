@@ -18,7 +18,7 @@ package me.zhengjie.modules.system.service;
 import java.util.Map;
 
 /**
- * @author Zheng Jie
+ * 
  * @date 2020-05-02
  */
 public interface MonitorService {

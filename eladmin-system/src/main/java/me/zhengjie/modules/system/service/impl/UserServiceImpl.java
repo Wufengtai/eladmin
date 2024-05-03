@@ -46,7 +46,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * @author Zheng Jie
+ *
  * @date 2018-11-23
  */
 @Service
@@ -142,6 +142,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user.setPhone(resources.getPhone());
         user.setNickName(resources.getNickName());
         user.setGender(resources.getGender());
+        user.setIc(resources.getIc());
         saveOrUpdate(user);
         // 清除缓存
         delCaches(user.getId(), user.getUsername());

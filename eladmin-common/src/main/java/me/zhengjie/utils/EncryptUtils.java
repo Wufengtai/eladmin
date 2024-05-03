@@ -24,7 +24,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * 加密
- * @author Zheng Jie
+ * 
  * @date 2018-11-23
  */
 

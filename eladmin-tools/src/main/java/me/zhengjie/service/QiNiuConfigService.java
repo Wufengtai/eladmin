@@ -19,7 +19,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import me.zhengjie.domain.QiniuConfig;
 
 /**
- * @author Zheng Jie
+ * 
  * @date 2018-12-31
  */
 public interface QiNiuConfigService extends IService<QiniuConfig> {

@@ -20,7 +20,7 @@ import lombok.Data;
 /**
  * Jwt参数配置
  *
- * @author Zheng Jie
+ * 
  * @date 2019年11月28日
  */
 @Data

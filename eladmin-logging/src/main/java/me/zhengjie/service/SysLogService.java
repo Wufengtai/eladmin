@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author Zheng Jie
+ * 
  * @date 2018-11-24
  */
 public interface SysLogService extends IService<SysLog>{

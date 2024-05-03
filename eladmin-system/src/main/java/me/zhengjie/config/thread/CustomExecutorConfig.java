@@ -9,9 +9,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * 创建自定义的线程池
- * @author Zheng Jie
- * @description
- * @date 2023-06-08
  **/
 @Configuration
 public class CustomExecutorConfig {

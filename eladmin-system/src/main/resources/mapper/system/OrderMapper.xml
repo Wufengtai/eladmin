@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="me.zhengjie.modules.order.mapper.OrderMapper">
+    <resultMap id="BaseResultMap" type="me.zhengjie.modules.order.entity.Order">
+        <id column="id" property="id"/>
+        <result column="num" property="num"/>
+        <result column="address" property="address"/>
+        <result column="phone" property="phone"/>
+        <result column="user_id" property="userId"/>
+        <result column="user_name" property="userName"/>
+        <result column="price" property="price"/>
+        <result column="status" property="status"/>
+        <result column="store_id" property="storeId"/>
+        <result column="store_name" property="storeName"/>
+        <result column="area_id" property="areaId"/>
+        <result column="area_name" property="areaName"/>
+        <result column="good_id" property="goodId"/>
+        <result column="good_name" property="goodName"/>
+        <result column="progress" property="progress"/>
+        <result column="create_by" property="createBy"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, num, address, user_id,good_id,good_name,create_time, update_time, create_by, update_by, user_name, progress, phone, address, price, status, store_id, store_name,area_id, area_name
+    </sql>
+
+    <select id="getGoodByIc" resultMap="BaseResultMap">
+        select
+        u.ic,
+        o.*
+        from qbs_order o
+        left join sys_user u on u.ic = #{ic}
+        <where>
+            o.progress = 1
+        </where>
+    </select>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        select
+        u.is_admin,
+        o.*
+        from qbs_order o
+        left join sys_user u on u.username = #{username}
+        <where>
+            u.is_admin = true
+            or o.user_id = u.user_id
+            <if test="criteria.ids != null and criteria.ids.size() > 0">
+                and o.id in
+                <foreach collection="criteria.ids" item="id" open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </if>
+            <if test="criteria.name != null and criteria.name != ''">
+                and o.name like concat('%', #{criteria.name}, '%')
+            </if>
+            <if test="criteria.progress != null">
+                and o.progress = #{criteria.progress}
+            </if>
+            <if test="criteria.createTime != null and criteria.createTime.size() != 0">
+                and o.create_time between #{criteria.createTime[0]} and #{criteria.createTime[1]}
+            </if>
+        </where>
+    </select>
+</mapper>

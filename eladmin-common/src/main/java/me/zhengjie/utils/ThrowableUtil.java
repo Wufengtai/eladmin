@@ -20,7 +20,7 @@ import java.io.StringWriter;
 
 /**
  * 异常工具 2019-01-06
- * @author Zheng Jie
+ * 
  */
 public class ThrowableUtil {
 

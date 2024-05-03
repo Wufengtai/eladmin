@@ -22,7 +22,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author Zheng Jie
+ * 
  * @description
  * @date 2023-06-12
  **/

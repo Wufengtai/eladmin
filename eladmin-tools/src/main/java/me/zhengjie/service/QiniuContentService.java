@@ -27,7 +27,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * @author Zheng Jie
+ * 
  * @date 2018-12-31
  */
 public interface QiniuContentService extends IService<QiniuContent> {
